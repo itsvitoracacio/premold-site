@@ -1,0 +1,130 @@
+section.conteudo-pecas:after,
+section.conteudo-pecas:before {
+	content: "";
+	display: table;
+}
+
+section.conteudo-pecas .row {
+	position:relative;
+}
+
+section.conteudo-pecas:after {
+	clear: both;
+}
+
+section.conteudo-pecas h4 {
+	background: #f8f8f8;
+	cursor: pointer;
+	border: 0px;
+	color: #4b4b4b;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    padding: 13px 28px;
+	width:25%;
+	margin-bottom: 5px;
+	position: relative;
+	display: block;	
+}
+
+section.conteudo-pecas h4:first-child {
+	border-top: 0px;
+}
+
+section.conteudo-pecas ul.content {
+	position: absolute;
+    right: 0;
+    top: 0;	
+	border: 0px;
+	opacity: 0;
+    -webkit-transition: opacity .15s linear;
+    -o-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+	width:75%;
+}
+
+section.conteudo-pecas ul.content:after,
+section.conteudo-pecas ul.content:before {
+	content: "";
+	display: table;
+}
+
+section.conteudo-pecas ul.content:after {
+	clear: both;
+}
+
+section.conteudo-pecas ul.content {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0px 30px;
+}
+
+section.conteudo-pecas .active {
+	cursor: default;
+	background-color: #ffbc13;
+	color: #fff;
+}
+
+section.conteudo-pecas .active:after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 50%;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent #fff transparent transparent;
+	-webkit-transform: translate3d(0,-50%,0);
+	-moz-transform: translate3d(0,-50%,0);
+	transform: translate3d(0,-50%,0);
+}
+
+section.conteudo-pecas .active + ul {
+	opacity: 1;
+}
+
+@media screen and (max-width: 767px) {
+	
+	section.conteudo-pecas { height:auto!important; }
+	
+	section.conteudo-pecas .row, section.conteudo-pecas ul.content  {
+		margin:0;
+	}
+	
+	section.conteudo-pecas h4 {
+		width: 100%;
+	}
+	
+	section.conteudo-pecas ul.content {
+		width: 100%;
+		zoom: 1;
+		position: relative;
+		height: 0px;
+	}
+	
+	section.conteudo-pecas ul.content { 
+		transform:scaleY(0);
+	}
+	
+	section.conteudo-pecas .active + ul {
+	  overflow:hidden;
+	  transition:transform 0.3s ease-out;
+	  height:auto;
+	  transform:scaleY(1);
+	  transform-origin:top;
+	}
+
+	a.custom_amarelo { position: relative; }
+	
+	section.conteudo-pecas .wprt-spacer { height:20px!important; }
+	
+	.padding-0 {
+		margin: 20px 0px;
+	}
+	
+}
+
+@media screen and (min-width:768px) and (max-width: 991px) {
+    section.conteudo-pecas { height:auto!important; }
+    
+}
